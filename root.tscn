@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://oflepkrff6mb"]
+
+[ext_resource type="Texture2D" uid="uid://dkae2bpmhkkgl" path="res://assets/slotBase.png" id="1_awi73"]
+[ext_resource type="Texture2D" uid="uid://j6luw20na5su" path="res://assets/slotOn.png" id="2_54kqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5akg4"]
+
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.109804, 0.113725, 0.156863, 1)
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.286275, 0.294118, 0.352941, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -88.0
+offset_right = 187.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5akg4")
+
+[node name="ToggleButton" type="CheckButton" parent="Panel"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 202.0
+offset_right = 216.0
+offset_bottom = 226.0
+
+[node name="SlotBase" type="NinePatchRect" parent="Panel/ToggleButton"]
+custom_minimum_size = Vector2(96, 32)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_awi73")
+
+[node name="SlotOn" type="NinePatchRect" parent="Panel/ToggleButton"]
+custom_minimum_size = Vector2(96, 32)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_54kqv")
